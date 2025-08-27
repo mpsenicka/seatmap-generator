@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { PropsWithChildren } from 'react'
 
-import AppProvider from '@/providers/app-provider/AppProvider'
+import { AppProvider } from '@/providers/app-provider'
 import { PageProps } from '@/types/PageTypes'
 
 type RootLayoutProps = { locale: string }

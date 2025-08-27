@@ -13,7 +13,7 @@ export const DynamicIcon = ({
     color = 'gray.0',
     size = 20,
 }: DynamicIconProps) => {
-    const LucideIcon = icons[name] || icons.Star
+    const LucideIcon = (icons as Record<string, any>)[name] || icons.Star
 
     const theme = useMantineTheme()
     const themeColor = useMemo(() => {

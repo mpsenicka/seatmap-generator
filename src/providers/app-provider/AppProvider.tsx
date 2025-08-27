@@ -26,7 +26,7 @@ export const useAppContext = () => useContext(AppContext)
 
 type AppProviderProps = Pick<AppContextType, 'lang'>
 
-export default function AppProvider({
+export function AppProvider({
     children,
     initialLang,
 }: AddPrefixToObject<AppProviderProps, 'initial'> & {
