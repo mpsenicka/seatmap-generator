@@ -1,0 +1,23 @@
+{
+  "common": {
+    "changeLanguage": "Změnit jazyk",
+    "notifications": {
+      "error": {
+        "oops": "Akce se nepodařila",
+        "tryAgainLater": "Zkuste to znovu"
+      },
+      "success": {
+        "taskSuccessful": "Akce proběhla úspěšně"
+      }
+    },
+    "switchToDarkMode": "Přepnout na tmavý režim",
+    "switchToLightMode": "Přepnout na světlý režim"
+  },
+  "home": {
+    "title": "Seatmap Generator"
+  },
+  "locale": {
+    "cs_name": "Čeština",
+    "en_name": "English"
+  }
+}

@@ -1,0 +1,18 @@
+**/next-env.d.ts
+**/next.config.js
+**/sentry.client.config.js
+**/sentry.server.config.js
+**/jest.setup.js
+**/jest.config.js
+**/mockData.ts
+**/postcss.config.js
+
+# Ignore tests
+**/*.test.tsx
+
+# Custom JavaScript files
+**/public/**/*.js
+
+# Auto-generated package
+packages/lib-api
+packages/service-sms/src/api-fetch

@@ -1,0 +1,23 @@
+{
+  "common": {
+    "changeLanguage": "Change language",
+    "notifications": {
+      "error": {
+        "oops": "Action failed",
+        "tryAgainLater": "Please try again"
+      },
+      "success": {
+        "taskSuccessful": "Action successful"
+      }
+    },
+    "switchToDarkMode": "Switch to dark mode",
+    "switchToLightMode": "Switch to light mode"
+  },
+  "home": {
+    "title": "Seatmap Generator"
+  },
+  "locale": {
+    "cs_name": "Čeština",
+    "en_name": "English"
+  }
+}
