@@ -19,5 +19,31 @@
   "locale": {
     "cs_name": "Čeština",
     "en_name": "English"
+  },
+  "seatmapVariants": {
+    "empty": {
+      "ctaButton": "Create new seatmap",
+      "hint": "It looks like you don't have any seatmaps. Click the button below to create your first seatmap."
+    }
+  },
+  "seatmaps": {
+    "create": {
+      "headline": "Seatmap creation",
+      "stepper": {
+        "area": {
+          "description": "Select the name of the seatmap, sectors, seat order and rows",
+          "label": "Arena settings"
+        },
+        "upload": {
+          "description": "Files with the seatmap will be imported into the editor",
+          "label": "Upload files"
+        },
+        "variant": {
+          "description": "Create categories for individual seats",
+          "label": "Variant settings"
+        }
+      },
+      "title": "Seatmap"
+    }
   }
 }

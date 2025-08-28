@@ -37,11 +37,11 @@ const theme: MantineTheme = {
         sizes: {
             ...DEFAULT_THEME.headings.sizes,
             h1: {
-                fontSize: '48px',
+                fontSize: '28px',
                 lineHeight: '1.3',
             },
             h2: {
-                fontSize: '36px',
+                fontSize: '24px',
                 lineHeight: '1.3',
             },
             h3: {

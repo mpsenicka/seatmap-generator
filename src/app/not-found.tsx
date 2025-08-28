@@ -1,8 +1,9 @@
 'use client'
 
-import { routerCatalog } from '@/RouterCatalog'
-import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+
+import { useRouter } from '@/i18n'
+import { routerCatalog } from '@/RouterCatalog'
 
 export default function NotFound(): null {
     const router = useRouter()

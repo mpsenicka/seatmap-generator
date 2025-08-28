@@ -1,16 +1,16 @@
 import { getTranslations } from 'next-intl/server'
 
-import { Homepage } from '@/features/home'
+import { CreateSeatmap } from '@/features/seatmaps/create'
 import { formatTitle } from '@/utils/title/formatTitle'
 
 export async function generateMetadata() {
     const t = await getTranslations()
-    const title = t('home.title')
+    const title = t('seatmaps.create.title')
     return {
         title: formatTitle(title),
     }
 }
 
 export default async function Page() {
-    return <Homepage />
+    return <CreateSeatmap />
 }

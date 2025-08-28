@@ -33,12 +33,7 @@ export const AppLayout = ({
                                 h={isMobile ? 32 : 40}
                                 src='/images/logo.png'
                                 w={isMobile ? 32 : 40}
-                                {...(isMobile
-                                    ? {}
-                                    : {
-                                          onClick: () =>
-                                              router.push(routerCatalog.root),
-                                      })}
+                                onClick={() => router.push(routerCatalog.root)}
                             />
                         </Group>
                         {headerMiddleSection}
@@ -55,7 +50,7 @@ export const AppLayout = ({
                 </Container>
             </AppShell.Header>
 
-            <AppShell.Main style={{ overflowX: 'hidden' }}>
+            <AppShell.Main style={{ overflowX: 'hidden', display: 'flex' }}>
                 {children}
             </AppShell.Main>
         </AppShell>

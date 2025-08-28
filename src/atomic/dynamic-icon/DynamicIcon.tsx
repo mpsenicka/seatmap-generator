@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MantineColor, useMantineTheme } from '@mantine/core'
 import { icons } from 'lucide-react'
 import { useMemo } from 'react'
@@ -8,11 +9,7 @@ type DynamicIconProps = {
     size?: number
 }
 
-export const DynamicIcon = ({
-    name,
-    color = 'gray.0',
-    size = 20,
-}: DynamicIconProps) => {
+export const DynamicIcon = ({ name, color, size = 20 }: DynamicIconProps) => {
     const LucideIcon = (icons as Record<string, any>)[name] || icons.Star
 
     const theme = useMantineTheme()

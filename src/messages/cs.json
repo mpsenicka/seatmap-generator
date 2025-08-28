@@ -19,5 +19,31 @@
   "locale": {
     "cs_name": "Čeština",
     "en_name": "English"
+  },
+  "seatmapVariants": {
+    "empty": {
+      "ctaButton": "Vytvořit novou mapu",
+      "hint": "Vypadá to, že nemáte žádné mapy. Klikněte na tlačítko níže a vytvořte svou první mapu."
+    }
+  },
+  "seatmaps": {
+    "create": {
+      "headline": "Editor mapy sedadel",
+      "stepper": {
+        "area": {
+          "description": "Zvolte si jméno mapy, sektory, pořadí sedaček a řad",
+          "label": "Nastavení arény"
+        },
+        "upload": {
+          "description": "Soubory s mapou se přeloží do editoru",
+          "label": "Nahrát soubory"
+        },
+        "variant": {
+          "description": "Vytvořte si kategorie pro jednotlivá sedadla",
+          "label": "Nastavení varianty"
+        }
+      },
+      "title": "Mapa sedadel"
+    }
   }
 }
