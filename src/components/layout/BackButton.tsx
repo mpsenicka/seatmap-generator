@@ -25,7 +25,7 @@ export const BackButton = ({ onBack, children }: BackButtonProps) => {
         return (
             <Button
                 leftSection={<ChevronLeft />}
-                variant='subtle'
+                variant='transparent'
                 onClick={handleBack}
             >
                 {children}
@@ -33,7 +33,7 @@ export const BackButton = ({ onBack, children }: BackButtonProps) => {
         )
     }
     return (
-        <ActionIcon variant='subtle' onClick={handleBack}>
+        <ActionIcon variant='transparent' onClick={handleBack}>
             <ChevronLeft />
         </ActionIcon>
     )

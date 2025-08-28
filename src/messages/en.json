@@ -1,5 +1,8 @@
 {
   "common": {
+    "actions": {
+      "nextStep": "Next step"
+    },
     "changeLanguage": "Change language",
     "notifications": {
       "error": {
@@ -63,6 +66,41 @@
           "zoomOut": "Zoom out"
         }
       }
+    },
+    "upload": {
+      "backgroundUpload": "Upload SVG of background",
+      "description": "Upload your seating map SVG file to begin. Make sure your SVG contains proper group elements and seat circles.",
+      "heading": "Upload seatmap",
+      "hintButton": "Designer Hint",
+      "hintDrawer": {
+        "description": "To ensure your SVG works properly with our seatmap generator, please follow this structure:",
+        "example": {
+          "title": "Example Structure"
+        },
+        "structure": {
+          "rootGroup": "• Start with a root group that contains everything",
+          "rowGroup": "• Add row groups inside each sector group",
+          "seatGroups": "• Create individual seat groups inside each row",
+          "seatShapes": "• Add seat shape elements (circles) inside each seat group with proper coordinates (cx, cy) and radius (r)",
+          "sectorGroup": "• Create groups for each seating sector/area",
+          "sectorShape": "• Add the sector background shape (path) inside each sector group",
+          "title": "SVG Structure Requirements"
+        },
+        "tips": {
+          "coordinates": "• Each seat circle must have cx, cy coordinates and r radius attributes",
+          "export": "• Export from design software with proper group structure preserved",
+          "hierarchy": "• Follow this hierarchy: Root Group → Sector Group → (Sector Shape + Row Groups) → Seat Groups → Seat Shapes",
+          "naming": "• Use any ID names you prefer, but keep them unique and descriptive",
+          "organization": "• Keep sector shapes and row groups as siblings within sector groups",
+          "title": "Design Tips"
+        },
+        "title": "SVG Structure Guide for Designers"
+      },
+      "languages": {
+        "label": "Select supported languages",
+        "placeholder": "Select languages"
+      },
+      "mapUpload": "Upload SVG of MAP"
     }
   }
 }

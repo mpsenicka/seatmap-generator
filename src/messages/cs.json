@@ -1,5 +1,8 @@
 {
   "common": {
+    "actions": {
+      "nextStep": "Další krok"
+    },
     "changeLanguage": "Změnit jazyk",
     "notifications": {
       "error": {
@@ -63,6 +66,41 @@
           "zoomOut": "Oddálit"
         }
       }
+    },
+    "upload": {
+      "backgroundUpload": "Nahrát SVG pozadí",
+      "description": "Nahrajte svůj SVG soubor s mapou sedadel. Ujistěte se, že váš SVG obsahuje správné skupinové prvky a kruhy sedadel.",
+      "heading": "Nahrát mapu sedadel",
+      "hintButton": "Nápověda pro designéry",
+      "hintDrawer": {
+        "description": "Aby váš SVG správně fungoval s naším generátorem map sedadel, dodržujte prosím tuto strukturu:",
+        "example": {
+          "title": "Příklad struktury"
+        },
+        "structure": {
+          "rootGroup": "• Začněte s kořenovou skupinou, která obsahuje vše",
+          "rowGroup": "• Přidejte skupiny řad do každé skupiny sektoru",
+          "seatGroups": "• Vytvořte jednotlivé skupiny sedadel uvnitř každé řady",
+          "seatShapes": "• Přidejte tvary sedadel (kruhy) do každé skupiny sedadla se správnými souřadnicemi (cx, cy) a poloměrem (r)",
+          "sectorGroup": "• Vytvořte skupiny pro každý sektor/oblast sedadel",
+          "sectorShape": "• Přidejte tvar pozadí sektoru (path) do každé skupiny sektoru",
+          "title": "Požadavky na strukturu SVG"
+        },
+        "tips": {
+          "coordinates": "• Každý kruh sedadla musí mít atributy cx, cy (souřadnice) a r (poloměr)",
+          "export": "• Exportujte z designového softwaru se zachovanou správnou skupinovou strukturou",
+          "hierarchy": "• Dodržujte tuto hierarchii: Kořenová skupina → Skupina sektoru → (Tvar sektoru + Skupiny řad) → Skupiny sedadel → Tvary sedadel",
+          "naming": "• Používejte jakákoli ID jména, která preferujete, ale udržujte je jedinečná a popisná",
+          "organization": "• Udržujte tvary sektorů a skupiny řad jako sourozence uvnitř skupin sektorů",
+          "title": "Tipy pro design"
+        },
+        "title": "Průvodce strukturou SVG pro designéry"
+      },
+      "languages": {
+        "label": "Vyberte podporované jazyky",
+        "placeholder": "Vyberte jazyky"
+      },
+      "mapUpload": "Nahrát SVG mapu"
     }
   }
 }
