@@ -14,6 +14,6 @@ export async function middleware(req: NextRequest) {
 export const config = {
     // Skip all paths that should not be internationalized
     matcher: [
-        '/((?!images|sitemap|shared|_next/static|api|monitoring|_next/image|favicon.ico).*)',
+        '/((?!images|sitemap|shared|_next/static|api|monitoring|_next/image|favicon.ico|manifest.json|robots.txt|.*\\.(ico|png|jpg|jpeg|gif|svg|css|js|woff|woff2|ttf|eot)).*)',
     ],
 }
