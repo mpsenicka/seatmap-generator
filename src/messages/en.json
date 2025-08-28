@@ -28,7 +28,6 @@
   },
   "seatmaps": {
     "create": {
-      "headline": "Seatmap creation",
       "stepper": {
         "area": {
           "description": "Select the name of the seatmap, sectors, seat order and rows",
@@ -44,6 +43,26 @@
         }
       },
       "title": "Seatmap"
+    },
+    "editor": {
+      "toolbar": {
+        "minimap": {
+          "hideMinimap": "Hide minimap",
+          "showMinimap": "Show minimap"
+        },
+        "selection": {
+          "objectSelection": "Object selection",
+          "rectangleSelection": "Rectangle selection",
+          "selectRows": "Select rows",
+          "selectSeats": "Select seats"
+        },
+        "zoom": {
+          "deselectAll": "Deselect all",
+          "resetZoom": "Reset zoom",
+          "zoomIn": "Zoom in",
+          "zoomOut": "Zoom out"
+        }
+      }
     }
   }
 }

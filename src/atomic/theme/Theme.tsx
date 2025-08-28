@@ -6,6 +6,7 @@ import { colors } from './Colors'
 import { MantineButton } from './mantine/MantineButton'
 import { MantineCard } from './mantine/MantineCard'
 import { MantineContainer } from './mantine/MantineContainer'
+import { MantineSegmentedControl } from './mantine/MantineSegmentedControl'
 import { MantineText } from './mantine/MantineText'
 import { MantineTitle } from './mantine/MantineTitle'
 
@@ -68,6 +69,7 @@ const theme: MantineTheme = {
         Title: MantineTitle,
         Text: MantineText,
         Card: MantineCard,
+        SegmentedControl: MantineSegmentedControl,
     },
 }
 export default theme

@@ -28,7 +28,6 @@
   },
   "seatmaps": {
     "create": {
-      "headline": "Editor mapy sedadel",
       "stepper": {
         "area": {
           "description": "Zvolte si jméno mapy, sektory, pořadí sedaček a řad",
@@ -44,6 +43,26 @@
         }
       },
       "title": "Mapa sedadel"
+    },
+    "editor": {
+      "toolbar": {
+        "minimap": {
+          "hideMinimap": "Skrýt minimapu",
+          "showMinimap": "Zobrazit minimapu"
+        },
+        "selection": {
+          "objectSelection": "Výběr objektů",
+          "rectangleSelection": "Obdélníkový výběr",
+          "selectRows": "Výběr řad",
+          "selectSeats": "Výběr sedadel"
+        },
+        "zoom": {
+          "deselectAll": "Zrušit výběr",
+          "resetZoom": "Obnovit přiblížení",
+          "zoomIn": "Přiblížit",
+          "zoomOut": "Oddálit"
+        }
+      }
     }
   }
 }

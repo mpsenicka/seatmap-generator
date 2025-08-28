@@ -20,7 +20,7 @@ export const EditorStepper = ({ active, setActive }: EditorStepperProps) => {
     const t = useTranslations()
 
     return (
-        <Stepper active={active} mx='lg' my='md' onStepClick={setActive}>
+        <Stepper active={active} mx='lg' onStepClick={setActive}>
             <Stepper.Step
                 description={t('seatmaps.create.stepper.upload.description')}
                 icon={<DynamicIcon name='Upload' />}
