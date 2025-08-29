@@ -41,6 +41,7 @@ export const RowNumberingConfig = ({
         <Stack h='100%' justify='space-between' p='sm'>
             <Stack>
                 <Select
+                    allowDeselect={false}
                     data={[
                         {
                             value: 'numeric',
@@ -74,6 +75,7 @@ export const RowNumberingConfig = ({
                 )}
 
                 <Select
+                    allowDeselect={false}
                     data={[
                         {
                             value: 'top',

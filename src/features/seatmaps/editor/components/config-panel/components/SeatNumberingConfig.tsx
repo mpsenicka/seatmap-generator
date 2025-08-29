@@ -44,6 +44,7 @@ export const SeatNumberingConfig = ({
         <Stack h='100%' justify='space-between' p='sm'>
             <Stack>
                 <Select
+                    allowDeselect={false}
                     data={[
                         {
                             value: 'numeric',
@@ -79,6 +80,7 @@ export const SeatNumberingConfig = ({
                 )}
 
                 <Select
+                    allowDeselect={false}
                     data={[
                         {
                             value: 'left-to-right',
@@ -104,6 +106,7 @@ export const SeatNumberingConfig = ({
                 />
 
                 <Select
+                    allowDeselect={false}
                     data={[
                         {
                             value: 'sequential',
