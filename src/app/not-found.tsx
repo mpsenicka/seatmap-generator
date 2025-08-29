@@ -1,19 +1,13 @@
 'use client'
 
-import { useEffect } from 'react'
+import Link from 'next/link'
 
-import { useRouter } from '@/i18n'
-import { routerCatalog } from '@/RouterCatalog'
-
-export default function NotFound(): null {
-    const router = useRouter()
-
-    useEffect(() => {
-        // Only redirect on the client side
-        if (typeof window !== 'undefined') {
-            router.push(routerCatalog.root)
-        }
-    }, [router])
-
-    return null
+export default function NotFound() {
+    return (
+        <div>
+            <h2>Not Found</h2>
+            <p>Could not find requested resource</p>
+            <Link href='/'>Return Home</Link>
+        </div>
+    )
 }
