@@ -3,6 +3,9 @@
 import { Stack } from '@mantine/core'
 import { useState } from 'react'
 
+import { useRouter } from '@/i18n'
+import { routerCatalog } from '@/RouterCatalog'
+
 import { EditorStep, EditorStepper } from './components/editor-stepper'
 import { AreaStep } from './components/steps/area-step'
 import { UploadStep } from './components/steps/upload-step'
@@ -11,6 +14,7 @@ import { VariantStep } from './components/steps/variant-step'
 
 export const SeatmapEditor = () => {
     const [active, setActive] = useState(EditorStep.AREA)
+    const router = useRouter()
 
     const handleProcessMap = async (
         map: File,
@@ -25,6 +29,10 @@ export const SeatmapEditor = () => {
         setActive(EditorStep.VARIANT)
     }
 
+    const handleProcessAreaAndClose = () => {
+        router.push(routerCatalog.root)
+    }
+
     return (
         <Stack flex={1}>
             {active === EditorStep.UPLOAD && (
@@ -34,6 +42,7 @@ export const SeatmapEditor = () => {
                 <AreaStep
                     onBack={() => setActive(EditorStep.UPLOAD)}
                     onSubmit={handleProcessArea}
+                    onSubmitAndClose={handleProcessAreaAndClose}
                 />
             )}
             {active === EditorStep.VARIANT && <VariantStep />}

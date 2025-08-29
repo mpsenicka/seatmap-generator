@@ -12,9 +12,14 @@ import { Toolbar } from '../../toolbar'
 type AreaStepProps = {
     onBack: () => void
     onSubmit: () => void
+    onSubmitAndClose: () => void
 }
 
-export const AreaStep = ({ onBack, onSubmit }: AreaStepProps) => {
+export const AreaStep = ({
+    onBack,
+    onSubmit,
+    onSubmitAndClose,
+}: AreaStepProps) => {
     const t = useTranslations()
 
     const [activeConfigurationTab, setActiveConfigurationTab] =
@@ -28,6 +33,10 @@ export const AreaStep = ({ onBack, onSubmit }: AreaStepProps) => {
         onSubmit()
     }
 
+    const handleSubmitAndClose = () => {
+        onSubmitAndClose()
+    }
+
     return (
         <Stack flex={1}>
             <Topbar
@@ -38,7 +47,7 @@ export const AreaStep = ({ onBack, onSubmit }: AreaStepProps) => {
                 }}
                 right={
                     <Group>
-                        <Tooltip label={t('seatmaps.upload.hintButton')}>
+                        <Tooltip label={t('seatmaps.area.hintButton')}>
                             <ActionIcon
                                 color='indigo'
                                 radius='xl'
@@ -50,12 +59,18 @@ export const AreaStep = ({ onBack, onSubmit }: AreaStepProps) => {
                             </ActionIcon>
                         </Tooltip>
                         <Button
+                            variant='outline'
+                            onClick={handleSubmitAndClose}
+                        >
+                            {t('seatmaps.area.createAreaAndCloseCta')}
+                        </Button>
+                        <Button
                             rightSection={
                                 <DynamicIcon name='ArrowRight' size={16} />
                             }
                             onClick={handleSubmit}
                         >
-                            {t('common.actions.nextStep')}
+                            {t('seatmaps.area.addCategoriesCta')}
                         </Button>
                     </Group>
                 }

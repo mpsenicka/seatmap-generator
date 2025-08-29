@@ -98,11 +98,10 @@ export const UploadStep = ({ processMap }: UploadStepProps) => {
                             }
                             onClick={() => form.onSubmit(handleSubmit)()}
                         >
-                            {t('common.actions.nextStep')}
+                            {t('seatmaps.upload.setupAreaCta')}
                         </Button>
                     </Group>
                 }
-                title={t('seatmaps.upload.heading')}
             />
             <Card withBorder padding='xl' radius='md' shadow='sm'>
                 <Stack gap='lg'>

@@ -1,7 +1,6 @@
 {
   "common": {
     "actions": {
-      "nextStep": "Next step",
       "previousStep": "Previous step"
     },
     "changeLanguage": "Change language",
@@ -31,6 +30,11 @@
     }
   },
   "seatmaps": {
+    "area": {
+      "addCategoriesCta": "Add categories",
+      "createAreaAndCloseCta": "Create area and close",
+      "hintButton": "Designer hint"
+    },
     "create": {
       "config": {
         "numbering": {
@@ -43,11 +47,8 @@
           "fromBottom": "From bottom",
           "fromTop": "From top",
           "numericStyle": "Numeric (1, 2, 3...)",
-          "patternLabel": "Numbering pattern",
-          "sequentialPattern": "Sequential",
           "startingNumberLabel": "Starting number",
-          "styleLabel": "Numbering style",
-          "zigzagPattern": "Zigzag (alternating rows)"
+          "styleLabel": "Numbering style"
         },
         "seatNumbering": {
           "alphabeticStyle": "Alphabetic (A, B, C...)",
@@ -136,7 +137,8 @@
         "label": "Select supported languages",
         "placeholder": "Select languages"
       },
-      "mapUpload": "Upload SVG of MAP"
+      "mapUpload": "Upload SVG of MAP",
+      "setupAreaCta": "Setup area"
     }
   }
 }

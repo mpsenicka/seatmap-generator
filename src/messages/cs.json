@@ -1,7 +1,6 @@
 {
   "common": {
     "actions": {
-      "nextStep": "Další krok",
       "previousStep": "Předchozí krok"
     },
     "changeLanguage": "Změnit jazyk",
@@ -18,7 +17,7 @@
     "switchToLightMode": "Přepnout na světlý režim"
   },
   "home": {
-    "title": "Seatmap Generator"
+    "title": "Generátor zasedacích arén"
   },
   "locale": {
     "cs_name": "Čeština",
@@ -26,11 +25,16 @@
   },
   "seatmapVariants": {
     "empty": {
-      "ctaButton": "Vytvořit novou mapu",
-      "hint": "Vypadá to, že nemáte žádné mapy. Klikněte na tlačítko níže a vytvořte svou první mapu."
+      "ctaButton": "Vytvořit novou arénu",
+      "hint": "Vypadá to, že zatím nemáte žádné arény. Klikněte na tlačítko níže a jednoduše si vytvořte svou první."
     }
   },
   "seatmaps": {
+    "area": {
+      "addCategoriesCta": "Přidat kategorie",
+      "createAreaAndCloseCta": "Vytvořit arénu a zavřít",
+      "hintButton": "Nápověda pro designéry"
+    },
     "create": {
       "config": {
         "numbering": {
@@ -43,11 +47,8 @@
           "fromBottom": "Od spodu",
           "fromTop": "Od horního okraje",
           "numericStyle": "Numerické (1, 2, 3...)",
-          "patternLabel": "Vzor číslování",
-          "sequentialPattern": "Sekvenční",
           "startingNumberLabel": "Počáteční číslo",
-          "styleLabel": "Styl číslování",
-          "zigzagPattern": "Zigzag (střídavé řady)"
+          "styleLabel": "Styl číslování"
         },
         "seatNumbering": {
           "alphabeticStyle": "Abecední (A, B, C...)",
@@ -64,11 +65,11 @@
       },
       "stepper": {
         "area": {
-          "description": "Zvolte si jméno mapy, sektory, pořadí sedaček a řad",
+          "description": "Zvolte si jméno arény, sektory, pořadí sedaček a řad",
           "label": "Nastavení arény"
         },
         "upload": {
-          "description": "Soubory s mapou se přeloží do editoru",
+          "description": "Soubory s arénou se přeloží do editoru",
           "label": "Nahrát soubory"
         },
         "variant": {
@@ -81,7 +82,7 @@
         "seatNumbering": "Sedadla",
         "sector": "Sektory"
       },
-      "title": "Mapa sedadel"
+      "title": "Aréna"
     },
     "editor": {
       "toolbar": {
@@ -105,11 +106,11 @@
     },
     "upload": {
       "backgroundUpload": "Nahrát SVG pozadí",
-      "description": "Nahrajte svůj SVG soubor s mapou sedadel. Ujistěte se, že váš SVG obsahuje správné skupinové prvky a kruhy sedadel.",
-      "heading": "Vytvořit mapu sedadel",
+      "description": "Nahrajte svůj SVG soubor s požadovanou arénou. Ujistěte se, že váš SVG obsahuje správné skupinové prvky a kruhy sedadel.",
+      "heading": "Vytvořit arénu",
       "hintButton": "Nápověda pro designéry",
       "hintDrawer": {
-        "description": "Aby váš SVG správně fungoval s naším generátorem map sedadel, dodržujte prosím tuto strukturu:",
+        "description": "Aby váš SVG správně fungoval s naším generátorem zasedacích arén, dodržujte prosím tuto strukturu:",
         "example": {
           "title": "Příklad struktury"
         },
@@ -136,7 +137,8 @@
         "label": "Vyberte podporované jazyky",
         "placeholder": "Vyberte jazyky"
       },
-      "mapUpload": "Nahrát SVG mapu"
+      "mapUpload": "Nahrát SVG arénu",
+      "setupAreaCta": "Nastavit arénu"
     }
   }
 }
