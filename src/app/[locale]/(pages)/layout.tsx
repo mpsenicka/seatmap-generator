@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 
 import { AppLayout } from '@/components/layout'
-import { LayoutPageProps } from '@/types/PageTypes'
 import { AppProvider } from '@/providers/app-provider'
+import { LayoutPageProps } from '@/types/PageTypes'
 
 export default async function Layout({
     children,

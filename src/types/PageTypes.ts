@@ -1,7 +1,7 @@
-import { EmptyObject } from '@/utils/typescript'
 import { PropsWithChildren } from 'react'
 
 import { Params } from '@/typings/next-js'
+import { EmptyObject } from '@/utils/typescript'
 
 type PageableSearchParam<T extends Record<string, string>> = T & {
     page?: string

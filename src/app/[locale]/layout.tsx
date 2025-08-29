@@ -1,9 +1,9 @@
-import { routing } from '@/i18n'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { PropsWithChildren } from 'react'
 
+import { routing } from '@/i18n'
 import { AppProvider } from '@/providers/app-provider'
 import { PageProps } from '@/types/PageTypes'
 

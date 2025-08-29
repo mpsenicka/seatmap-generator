@@ -1,15 +1,10 @@
 'use client'
 
+import { noop } from 'lodash'
+import { createContext, ReactNode, useContext, useState } from 'react'
+
 import { DEFAULT_LANGUAGE } from '@/i18n'
 import { AddPrefixToObject } from '@/types/Helpers'
-import { noop } from 'lodash'
-import {
-    createContext,
-    ReactNode,
-    useContext,
-    useEffect,
-    useState,
-} from 'react'
 
 export interface AppContextType {
     lang: string
