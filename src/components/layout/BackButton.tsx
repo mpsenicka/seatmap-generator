@@ -1,6 +1,6 @@
 'use client'
 
-import { ActionIcon, Button } from '@mantine/core'
+import { ActionIcon, Button, ButtonProps } from '@mantine/core'
 import { ChevronLeft } from 'lucide-react'
 import { PropsWithChildren } from 'react'
 
@@ -8,9 +8,10 @@ import { useRouter } from '@/i18n'
 
 export type BackButtonProps = PropsWithChildren<{
     onBack?: () => void
-}>
+}> &
+    ButtonProps
 
-export const BackButton = ({ onBack, children }: BackButtonProps) => {
+export const BackButton = ({ onBack, children, ...props }: BackButtonProps) => {
     const router = useRouter()
 
     const handleBack = () => {
@@ -27,6 +28,7 @@ export const BackButton = ({ onBack, children }: BackButtonProps) => {
                 leftSection={<ChevronLeft />}
                 variant='transparent'
                 onClick={handleBack}
+                {...props}
             >
                 {children}
             </Button>

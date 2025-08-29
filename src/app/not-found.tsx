@@ -7,8 +7,13 @@ import { routerCatalog } from '@/RouterCatalog'
 
 export default function NotFound(): null {
     const router = useRouter()
+
     useEffect(() => {
-        router.push(routerCatalog.root)
-    }, [])
+        // Only redirect on the client side
+        if (typeof window !== 'undefined') {
+            router.push(routerCatalog.root)
+        }
+    }, [router])
+
     return null
 }

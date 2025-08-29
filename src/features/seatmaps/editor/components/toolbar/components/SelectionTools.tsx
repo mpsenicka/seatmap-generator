@@ -1,29 +1,36 @@
-import { Group, SegmentedControl, Tooltip } from '@mantine/core'
+import { ActionIcon, Group, SegmentedControl, Tooltip } from '@mantine/core'
 import { useTranslations } from 'next-intl'
 
 import { DynamicIcon } from '@/atomic/dynamic-icon'
 
 import {
-    SeatingGeneratorSelectionMode,
-    SeatingGeneratorSelectionTool,
-} from '../../types/toolbar'
+    SeatingEditorConfigPanelView,
+    SeatingEditorSelectionMode,
+    SeatingEditorSelectionTool,
+} from '../../../types'
 
 type Props = {
-    selectionTool: SeatingGeneratorSelectionTool
-    selectionMode: SeatingGeneratorSelectionMode
-    displayNumbering: boolean | string
-    toggleSelectionTool: (tool: SeatingGeneratorSelectionTool) => void
-    toggleSelectionMode: (mode: SeatingGeneratorSelectionMode) => void
+    selectionTool: SeatingEditorSelectionTool
+    selectionMode: SeatingEditorSelectionMode
+    toggleSelectionTool: (tool: SeatingEditorSelectionTool) => void
+    toggleSelectionMode: (mode: SeatingEditorSelectionMode) => void
+    clearSelection: () => void
+    activeConfigurationTab: SeatingEditorConfigPanelView
 }
 
 export const SelectionTools = ({
     selectionTool,
     selectionMode,
-    displayNumbering,
     toggleSelectionTool,
     toggleSelectionMode,
+    clearSelection,
+    activeConfigurationTab,
 }: Props) => {
     const t = useTranslations()
+
+    const localSelectionMode =
+        activeConfigurationTab === 'rowNumbering' ? 'row' : selectionMode
+
     return (
         <>
             <SegmentedControl
@@ -36,7 +43,10 @@ export const SelectionTools = ({
                                 )}
                             >
                                 <Group align='center' gap='4' justify='center'>
-                                    <DynamicIcon name='ArrowUpLeft' size={16} />
+                                    <DynamicIcon
+                                        name='MousePointerClick'
+                                        size={16}
+                                    />
                                 </Group>
                             </Tooltip>
                         ),
@@ -57,13 +67,13 @@ export const SelectionTools = ({
                                 </Group>
                             </Tooltip>
                         ),
-                        value: 'brush',
+                        value: 'rectangle',
                     },
                 ]}
                 orientation='vertical'
                 value={selectionTool}
                 onChange={(value) =>
-                    toggleSelectionTool(value as SeatingGeneratorSelectionTool)
+                    toggleSelectionTool(value as SeatingEditorSelectionTool)
                 }
             />
             <SegmentedControl
@@ -97,13 +107,22 @@ export const SelectionTools = ({
                         value: 'seat',
                     },
                 ]}
-                disabled={displayNumbering === 'row'}
+                disabled={activeConfigurationTab === 'rowNumbering'}
                 orientation='vertical'
-                value={selectionMode}
+                value={localSelectionMode}
                 onChange={(value) =>
-                    toggleSelectionMode(value as SeatingGeneratorSelectionMode)
+                    toggleSelectionMode(value as SeatingEditorSelectionMode)
                 }
             />
+            <Tooltip label={t('seatmaps.editor.toolbar.zoom.deselectAll')}>
+                <ActionIcon
+                    size='lg'
+                    variant='transparent'
+                    onClick={clearSelection}
+                >
+                    <DynamicIcon name='SquareSquare' size={16} />
+                </ActionIcon>
+            </Tooltip>
         </>
     )
 }

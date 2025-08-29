@@ -1,7 +1,8 @@
 {
   "common": {
     "actions": {
-      "nextStep": "Další krok"
+      "nextStep": "Další krok",
+      "previousStep": "Předchozí krok"
     },
     "changeLanguage": "Změnit jazyk",
     "notifications": {
@@ -31,6 +32,36 @@
   },
   "seatmaps": {
     "create": {
+      "config": {
+        "numbering": {
+          "applyNumberingCta": "Aplikovat číslování",
+          "clearNumberingCta": "Vymazat číslování"
+        },
+        "rowNumbering": {
+          "alphabeticStyle": "Abecední (A, B, C...)",
+          "directionLabel": "Směr číslování",
+          "fromBottom": "Od spodu",
+          "fromTop": "Od horního okraje",
+          "numericStyle": "Numerické (1, 2, 3...)",
+          "patternLabel": "Vzor číslování",
+          "sequentialPattern": "Sekvenční",
+          "startingNumberLabel": "Počáteční číslo",
+          "styleLabel": "Styl číslování",
+          "zigzagPattern": "Zigzag (střídavé řady)"
+        },
+        "seatNumbering": {
+          "alphabeticStyle": "Abecední (A, B, C...)",
+          "directionLabel": "Směr číslování",
+          "leftToRight": "Zleva doprava",
+          "numericStyle": "Numerické (1, 2, 3...)",
+          "patternLabel": "Vzor číslování",
+          "rightToLeft": "Zprava doleva",
+          "sequentialPattern": "Sekvenční",
+          "startingNumberLabel": "Počáteční číslo",
+          "styleLabel": "Styl číslování",
+          "zigzagPattern": "Zigzag (střídavé řady)"
+        }
+      },
       "stepper": {
         "area": {
           "description": "Zvolte si jméno mapy, sektory, pořadí sedaček a řad",
@@ -44,6 +75,11 @@
           "description": "Vytvořte si kategorie pro jednotlivá sedadla",
           "label": "Nastavení varianty"
         }
+      },
+      "tabs": {
+        "rowNumbering": "Řady",
+        "seatNumbering": "Sedadla",
+        "sector": "Sektory"
       },
       "title": "Mapa sedadel"
     },
@@ -70,7 +106,7 @@
     "upload": {
       "backgroundUpload": "Nahrát SVG pozadí",
       "description": "Nahrajte svůj SVG soubor s mapou sedadel. Ujistěte se, že váš SVG obsahuje správné skupinové prvky a kruhy sedadel.",
-      "heading": "Nahrát mapu sedadel",
+      "heading": "Vytvořit mapu sedadel",
       "hintButton": "Nápověda pro designéry",
       "hintDrawer": {
         "description": "Aby váš SVG správně fungoval s naším generátorem map sedadel, dodržujte prosím tuto strukturu:",

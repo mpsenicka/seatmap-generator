@@ -26,7 +26,7 @@ import { SupportedLanguages } from './constants'
 const getSchema = (t: TTranslate) => {
     return z.object({
         mapFile: z.file().mime('image/svg+xml'),
-        backgroundFile: z.file().mime('image/svg+xml').optional(),
+        backgroundFile: z.file().mime('image/svg+xml').optional().nullable(),
         languages: z.array(z.enum(SupportedLanguages)).min(1),
     })
 }

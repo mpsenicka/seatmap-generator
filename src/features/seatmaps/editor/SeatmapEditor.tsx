@@ -10,7 +10,7 @@ import { SupportedLanguages } from './components/steps/upload-step/constants'
 import { VariantStep } from './components/steps/variant-step'
 
 export const SeatmapEditor = () => {
-    const [active, setActive] = useState(EditorStep.UPLOAD)
+    const [active, setActive] = useState(EditorStep.AREA)
 
     const handleProcessMap = async (
         map: File,
@@ -18,6 +18,11 @@ export const SeatmapEditor = () => {
         languages: SupportedLanguages[],
     ) => {
         console.log(map, background, languages)
+        setActive(EditorStep.AREA)
+    }
+
+    const handleProcessArea = () => {
+        setActive(EditorStep.VARIANT)
     }
 
     return (
@@ -25,7 +30,12 @@ export const SeatmapEditor = () => {
             {active === EditorStep.UPLOAD && (
                 <UploadStep processMap={handleProcessMap} />
             )}
-            {active === EditorStep.AREA && <AreaStep />}
+            {active === EditorStep.AREA && (
+                <AreaStep
+                    onBack={() => setActive(EditorStep.UPLOAD)}
+                    onSubmit={handleProcessArea}
+                />
+            )}
             {active === EditorStep.VARIANT && <VariantStep />}
             <EditorStepper active={active} setActive={setActive} />
         </Stack>

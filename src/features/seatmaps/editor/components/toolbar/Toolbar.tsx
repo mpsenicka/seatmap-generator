@@ -1,44 +1,57 @@
 import { Stack } from '@mantine/core'
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 import {
-    SeatingGeneratorConfigureView,
-    SeatingGeneratorSelectionMode,
-    SeatingGeneratorSelectionTool,
-} from '../../types/toolbar'
-import { MinimapToggle } from './MinimapToggle'
-import { SelectionTools } from './SelectionTools'
-import { ZoomTools } from './ZoomTools'
+    SeatingEditorConfigPanelView,
+    SeatingEditorSelectionMode,
+    SeatingEditorSelectionTool,
+} from '../../types'
+import { MinimapToggle } from './components/MinimapToggle'
+import { SelectionTools } from './components/SelectionTools'
+import { ZoomTools } from './components/ZoomTools'
 
 type Props = {
-    selectionTool: SeatingGeneratorSelectionTool
-    selectionMode: SeatingGeneratorSelectionMode
-    displayNumbering: boolean | string
-    activeConfigurationTab: SeatingGeneratorConfigureView
-    showMinimap: boolean
-    toggleSelectionTool: (tool: SeatingGeneratorSelectionTool) => void
-    toggleSelectionMode: (mode: SeatingGeneratorSelectionMode) => void
-    zoomIn: () => void
-    zoomOut: () => void
-    resetZoom: () => void
-    clearSelection: () => void
-    setShowMinimap: Dispatch<SetStateAction<boolean>>
+    activeConfigurationTab: SeatingEditorConfigPanelView
 }
 
-export const Toolbar = ({
-    selectionTool,
-    selectionMode,
-    displayNumbering,
-    activeConfigurationTab,
-    showMinimap,
-    toggleSelectionTool,
-    toggleSelectionMode,
-    zoomIn,
-    zoomOut,
-    resetZoom,
-    clearSelection,
-    setShowMinimap,
-}: Props) => {
+export const Toolbar = ({ activeConfigurationTab }: Props) => {
+    const [showMinimap, setShowMinimap] = useState<boolean>(true)
+    const [selectionMode, setSelectionMode] =
+        useState<SeatingEditorSelectionMode>('row')
+    const [selectionTool, setSelectionTool] =
+        useState<SeatingEditorSelectionTool>('point')
+
+    const handleShowMinimap: Dispatch<SetStateAction<boolean>> = (value) => {
+        setShowMinimap(value)
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleClearSelection = () => {
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleResetZoom = () => {
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleToggleSelectionMode = (mode: SeatingEditorSelectionMode) => {
+        setSelectionMode(mode)
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleToggleSelectionTool = (tool: SeatingEditorSelectionTool) => {
+        setSelectionTool(tool)
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleZoomIn = () => {
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
+    const handleZoomOut = () => {
+        // Here emit, just leave the comment here, what's important is the space for it
+    }
+
     return (
         <Stack
             align='center'
@@ -52,24 +65,25 @@ export const Toolbar = ({
                 border: '1px solid var(--mantine-color-default-border)',
             }}
         >
-            {(activeConfigurationTab === 'numbering' ||
-                activeConfigurationTab === 'category') && (
+            {['seatNumbering', 'rowNumbering', 'category'].includes(
+                activeConfigurationTab,
+            ) && (
                 <SelectionTools
-                    displayNumbering={displayNumbering}
+                    activeConfigurationTab={activeConfigurationTab}
+                    clearSelection={handleClearSelection}
                     selectionMode={selectionMode}
                     selectionTool={selectionTool}
-                    toggleSelectionMode={toggleSelectionMode}
-                    toggleSelectionTool={toggleSelectionTool}
+                    toggleSelectionMode={handleToggleSelectionMode}
+                    toggleSelectionTool={handleToggleSelectionTool}
                 />
             )}
             <ZoomTools
-                clearSelection={clearSelection}
-                resetZoom={resetZoom}
-                zoomIn={zoomIn}
-                zoomOut={zoomOut}
+                resetZoom={handleResetZoom}
+                zoomIn={handleZoomIn}
+                zoomOut={handleZoomOut}
             />
             <MinimapToggle
-                setShowMinimap={setShowMinimap}
+                setShowMinimap={handleShowMinimap}
                 showMinimap={showMinimap}
             />
         </Stack>

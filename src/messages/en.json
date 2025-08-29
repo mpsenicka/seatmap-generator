@@ -1,7 +1,8 @@
 {
   "common": {
     "actions": {
-      "nextStep": "Next step"
+      "nextStep": "Next step",
+      "previousStep": "Previous step"
     },
     "changeLanguage": "Change language",
     "notifications": {
@@ -31,6 +32,36 @@
   },
   "seatmaps": {
     "create": {
+      "config": {
+        "numbering": {
+          "applyNumberingCta": "Apply numbering",
+          "clearNumberingCta": "Clear numbering"
+        },
+        "rowNumbering": {
+          "alphabeticStyle": "Alphabetic (A, B, C...)",
+          "directionLabel": "Numbering direction",
+          "fromBottom": "From bottom",
+          "fromTop": "From top",
+          "numericStyle": "Numeric (1, 2, 3...)",
+          "patternLabel": "Numbering pattern",
+          "sequentialPattern": "Sequential",
+          "startingNumberLabel": "Starting number",
+          "styleLabel": "Numbering style",
+          "zigzagPattern": "Zigzag (alternating rows)"
+        },
+        "seatNumbering": {
+          "alphabeticStyle": "Alphabetic (A, B, C...)",
+          "directionLabel": "Numbering direction",
+          "leftToRight": "Left to right",
+          "numericStyle": "Numeric (1, 2, 3...)",
+          "patternLabel": "Numbering pattern",
+          "rightToLeft": "Right to left",
+          "sequentialPattern": "Sequential",
+          "startingNumberLabel": "Starting number",
+          "styleLabel": "Numbering style",
+          "zigzagPattern": "Zigzag (alternating rows)"
+        }
+      },
       "stepper": {
         "area": {
           "description": "Select the name of the seatmap, sectors, seat order and rows",
@@ -44,6 +75,11 @@
           "description": "Create categories for individual seats",
           "label": "Variant settings"
         }
+      },
+      "tabs": {
+        "rowNumbering": "Rows",
+        "seatNumbering": "Seats",
+        "sector": "Sectors"
       },
       "title": "Seatmap"
     },
